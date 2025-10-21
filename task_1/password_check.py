@@ -1,5 +1,4 @@
-from bloom_filter import BloomFilter
-
+from task_1.bloom_filter import BloomFilter
 
 def check_password_uniqueness(bloom: BloomFilter, passwords: list[str]) -> dict[str, str]:
     """Перевіряє унікальність паролів, використовуючи фільтр Блума"""
@@ -31,5 +30,6 @@ if __name__ == "__main__":
     results = check_password_uniqueness(bloom, new_passwords_to_check)
 
     # Виведення результатів
+    print("\nРезультати перевірки паролів:")
     for password, status in results.items():
         print(f"Пароль '{password}' — {status}.")

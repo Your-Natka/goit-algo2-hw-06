@@ -4,6 +4,7 @@ from bitarray import bitarray
 
 class BloomFilter:
     def __init__(self, size: int = 1000, num_hashes: int = 3):
+        """Ініціалізуємо фільтр Блума з заданим розміром і кількістю хешів."""
         if size <= 0 or num_hashes <= 0:
             raise ValueError("Size and num_hashes must be positive integers.")
         self.size = size
